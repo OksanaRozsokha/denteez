@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-    compass = require('gulp-compass'),
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
     cssnano = require('gulp-cssnano'),
     rename = require("gulp-rename"),
     concat = require('gulp-concat'),
@@ -28,8 +29,6 @@ var config = {
         'src': [
             './node_modules/jquery/dist/jquery.min.js',
             './node_modules/tether/dist/js/tether.min.js',
-            './node_modules/bootstrap/dist/js/bootstrap.min.js',
-            './node_modules/owl.carousel/dist/owl.carousel.min.js',
             './src/js/*.js'
         ],
         'dest': './dist/js'
@@ -39,7 +38,10 @@ var config = {
         'dest': './dist/img/'
     },
     'fonts': {
-        'src': './src/fonts/*',
+        'src': [
+            './node_modules/font-awesome/fonts/*',
+            './src/fonts/*'
+        ],
         'dest': './dist/fonts/'
     }
 };
@@ -51,19 +53,21 @@ var config = {
 gulp.task('minify:html', function() {
     return gulp.src(config.html.src)
         .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest(config.html.dest));
+        .pipe(gulp.dest(config.html.dest))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 
 gulp.task('styles', function() {
     return gulp.src([config.sass.src])
-        .pipe(compass({
-            css: config.sass.dest,
-            sass: 'src/css/sass',
-            image: config.img.dest
-        }))
+        .pipe(sass().on('error', sass.logError))
         .pipe(rename({ suffix: '.min' }))
         .pipe(cssnano())
+        .pipe(autoprefixer({
+            browsers: '> 5%'
+        }))
         .pipe(gulp.dest(config.sass.dest))
         .pipe(browserSync.reload({
             stream: true
@@ -80,7 +84,10 @@ gulp.task('minify:img', function () {
 
 gulp.task('fonts', function () {
     return gulp.src(config.fonts.src)
-        .pipe(gulp.dest(config.fonts.dest));
+        .pipe(gulp.dest(config.fonts.dest))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 gulp.task('js', function () {
@@ -89,15 +96,13 @@ gulp.task('js', function () {
         .pipe(gulp.dest(config.js.dest));
 });
 
-gulp.task('sync', gulpsync.sync(['minify:html', 'styles', 'js']));
-
 gulp.task('clean', function () {
     return gulp.src(config.dest, {read: false})
         .pipe(clean());
 });
 
 gulp.task('build', function (callback) {
-    runSequence('clean', [ 'sync', 'minify:img','fonts'], callback)
+    runSequence('clean', [ 'minify:html', 'styles', 'js', 'minify:img','fonts'], callback)
 });
 
 gulp.task('browser-sync', ['styles'], function() {
@@ -109,10 +114,10 @@ gulp.task('browser-sync', ['styles'], function() {
 });
 
 
-gulp.task('watch',['browser-sync', 'styles'], function () {
+gulp.task('watch',['browser-sync', 'styles', 'minify:html'], function () {
     gulp.watch(config.sass.src, ['styles']);
-    gulp.watch(config.html.src, browserSync.reload);
-    gulp.watch('src/js/**/*.js', browserSync.reload);
+    gulp.watch(config.html.src, ['minify:html']);
+    gulp.watch('src/js/**/*.js',['js']);
 });
 
 gulp.task('default', function (callback) {
