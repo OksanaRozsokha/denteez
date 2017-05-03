@@ -22,7 +22,7 @@ var config = {
     },
     'sass': {
         'src': './src/css/sass/**/*.scss',
-        'dest': './dist/css/css'
+        'dest': './dist/css'
 
     },
     'js': {

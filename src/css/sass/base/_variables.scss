@@ -1,4 +1,27 @@
-$main-color: #87b448;
-$primary-text: #000;
-$secondary-color: #73993d;
-$secondary-text: #7c8695;
+$brand-green:  #87b448;
+$secondary-brand-green: #73993d;
+$tertiary-brand-green: #71973c;
+$primary-dark: #1c2534;;
+$secondary-grey: #59606b;
+$hover-blue: #f4f7fb;
+$border-grey: #e0e2e6;
+$tertiary-white: #fff;
+$aside-foot-blue: #b7bfcd;
+$nav-grey: #59606b;
+$unessential-grey: #d3d3d3;
+
+
+$brand-color: $brand-green;
+$secondary-brand: $secondary-brand-green;
+$tertiary-brand: $tertiary-brand-green;
+
+$primary-color: $primary-dark;
+$secondary-color: $secondary-grey;
+$tertiary-color: $tertiary-white;
+
+$hover-color: $hover-blue;
+$border-color: $border-grey;
+$aside-foot-color: $aside-foot-blue;
+$nav-color: $nav-grey;
+
+$unessential-color: $unessential-grey;

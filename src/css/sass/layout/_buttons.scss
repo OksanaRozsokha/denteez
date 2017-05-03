@@ -1,0 +1,33 @@
+.btn {
+  display: block;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &-chat {
+    width: 26px;
+    height: 22px;
+    @include small-bg("../img/chat-icon.png");
+    text-indent: -9999px;
+  }
+   &-notifications {
+     width: 24px;
+     height: 24px;
+     @include small-bg("../img/notifications-icon.png");
+     text-indent: -9999px;
+   }
+
+  &-brand {
+    padding: 10px 20px;
+    background: $brand-color;
+    color: $tertiary-color;
+    border-radius: 5px;
+
+    &:hover {
+      background: $tertiary-brand;
+    }
+
+  }
+
+
+}

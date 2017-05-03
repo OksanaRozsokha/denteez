@@ -1,12 +1,8 @@
-@mixin lato($size, $font-weight) {
-  font: $size 'Lato', sans-serif;
-  font-weight: $font-weight;
+@mixin proxima-reg($size) {
+  font: $size 'proxima-nova-reg', sans-serif;
 }
-@mixin gotham($size) {
-  font: $size "gotham", sans-serif;
-}
-@mixin open-sans($size) {
-  font: $size "open-sans", sans-serif;
+@mixin proxima-bold($size) {
+  font: $size "proxima-nova-bold", sans-serif;
 }
 //before - after
 @mixin pseudo( $content, $display){

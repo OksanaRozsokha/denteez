@@ -1,0 +1,51 @@
+.text {
+  font-size: 14px;
+  color: $secondary-color;
+  text-decoration: none;
+
+  &-prim {
+    color: $primary-color;
+  }
+
+  &-small {
+    font-size: 12px;
+  }
+
+  &-nav {
+    font-size: 16px;
+    color: $nav-color;
+
+  }
+
+  &-foot {
+    font-size: 12px;
+    color: $aside-foot-color;
+  }
+  &-unessential {
+    font-size: 11px;
+    color: $unessential-color;
+  }
+  &-lowercase {
+    text-transform: none;
+  }
+}
+
+
+.title {
+  color: $primary-color;
+
+  &-prim {
+    font-size: 13.61px;
+    &:hover {
+      color: $tertiary-brand;
+    }
+  }
+  &-secondary {
+    font-size: 14px;
+    color: $secondary-color;
+  }
+
+  &-tertiary {
+    color: $tertiary-color;
+  }
+}

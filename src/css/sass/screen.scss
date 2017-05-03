@@ -1,11 +1,17 @@
+@import "../../../node_modules/reset.scss/reset";
 @import "base/fonts";
 @import "base/variables";
 @import "base/mixins";
+@import "page/general-styles";
+@import "layout/typography";
 @import "layout/buttons";
-@import "layout/menu";
 @import "layout/header";
-@import "page/_reset";
-@import "page/_content";
-@import "page/_sidebar";
+@import "layout/search-input";
+@import "page/services-page";
+@import "layout/menu";
+@import "page/left-sidebar";
+@import "page/content";
+@import "page/right-sidebar";
+
 
 

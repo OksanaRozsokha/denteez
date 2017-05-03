@@ -1,0 +1,30 @@
+.search-field {
+  margin-right: 30px;
+}
+
+label {
+  position: relative;
+
+  &:before {
+    @include pseudo('', block);
+    position: absolute;
+    left: 11px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    @include small-bg("../img/search-icon.png");
+  }
+}
+.search-input {
+  padding: 12px 12px 9px 38px;
+  background: $secondary-brand;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  color: $tertiary-color;
+}
+
+@include placeholder {
+  font-size: 15px;
+  color: white;
+}

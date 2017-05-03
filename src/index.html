@@ -4,44 +4,276 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Business</title>
+        <title>Denteez</title>
         <link href="css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <header class="main-header">
             <div class="container">
-                <a href="#" class="logo">
-                    <img src="img/logo.png" alt="">
-                    <h1>Denteez</h1>
-                </a>
-                <form action="#" class="search-field">
-                    <input type="text" autocomplete="on" maxlength="50" placeholder="Company Name">
-                </form>
-                <ul class="buttons-list">
-                    <li><button class="btn btn-chat">Chat</button></li>
-                    <li><button class="btn btn-notifications">Notifications</button></li>
-                </ul>
-                <a href="#" class="user">
-                    <img src="img/users-profile-img.png" alt="">
-                    <span class="users-name">Maximillian Beekeeper</span>
-                </a>
+                <div class="flex-left">
+                    <a href="#" class="logo">
+                        <img src="img/logo.png" alt="">
+                        <h1>Denteez</h1>
+                    </a>
+                    <form action="#" class="search-field">
+                        <label>
+                            <input class="search-input" type="text" autocomplete="on" maxlength="100"  placeholder="Company Name">
+                        </label>
+                    </form>
+                </div>
+                <div class="flex-right">
+                    <ul class="buttons-list">
+                        <li><button class="btn btn-chat">Chat</button></li>
+                        <li><button class="btn btn-notifications">Notifications</button></li>
+                    </ul>
+                    <a href="#" class="user">
+                        <img src="img/users-profile-img.png" alt="">
+                        <span class="users-name title title-tertiary">Maximillian Beekeeper</span>
+                    </a>
+                </div>
             </div>
         </header>
         <section class="services-page">
             <div class="container">
-                <div class="sidebar">
+                <aside class="left-sidebar">
                     <nav class="main-nav">
                         <ul class="menu-list">
-                            <li>Feed</li>
-                            <li>Ask a Colleage</li>
-                            <li>Companies</li>
-                            <li>Service Directory</li>
+                            <li class="feed-item"><a class="text text-nav" href="#">Feed</a></li>
+                            <li class="ask-item"><a class="text text-nav" href="#">Ask a Colleaque</a></li>
+                            <li class="companies-item"><a class="text text-nav" href="#">Companies</a></li>
+                            <li class="directory-item"><a class="text text-nav" href="#">Service Directory</a></li>
                         </ul>
                     </nav>
-                </div>
+                    <div class="advertising-block">
+                        <h3 class="title title-secondary">Advertisement</h3>
+                        <a href="#"><img src="img/first-aside-img.png" alt=""></a>
+                        <p class="text">Ads by <a class="text text-secondary" href="#">Denteez.com</a></p>
+                    </div>
+                    <div class="companies-block">
+                        <div class="title-wrap">
+                            <h3 class="title title-secondary">Featured Companies</h3>
+                            <a href="#" class="text text-prim">See All</a>
+                        </div>
+                        <ul class="companies-list">
+                            <li>
+                                <a href="#" class="img-left"><img src="img/first-company.png" alt=""></a>
+                                <a href="#" class="title-link"><h4 class="title title-big">Company name</h4></a>
+                                <span class="text">Manuracturer</span>
+                                <span class="text">Belgrade, Serbia</span>
+                                <a href="#" class="follow-link">Follow now</a>
+                            </li>
+                            <li>
+                                <a href="#" class="img-left"><img src="img/second-company.png" alt=""></a>
+                                <a href="#" class="title-link"><h4 class="title title-big">Company name</h4></a>
+                                <span class="text">Service provide</span>
+                                <span class="text">New York, USA</span>
+                                <a href="#" class="follow-link">Follow now</a>
+                            </li>
+                            <li>
+                                <a href="#" class="img-left"><img src="img/third-company.png" alt=""></a>
+                                <a href="#" class="title-link"><h4 class="title title-big">Company name</h4></a>
+                                <span class="text">Supplier</span>
+                                <span class="text">London, England</span>
+                                <a href="#" class="follow-link">Follow now</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-foot">
+                        <p class="text text-small">Denteez Copyright 2015</p>
+                        <span class="text text-small">Term of use</span>
+                        <span class="text text-small">Privacy Policy</span>
+                    </div>
+                </aside>
+                <main>
+                    <div class="main-content">
+                        <h2 class="title title-main">Service Directory</h2>
+                        <button class="btn brand-btn">Add new service</button>
+                        <ul class="services-list">
+                            <li class="accountancy-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/accountancy-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Accountancy</h3></a>
+                            </li>
+                            <li class="associations-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/associations-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Associations</h3></a>
+                            </li>
+                            <li class="buy-sell-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/buy-sell-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Buy/Sell Dental Practice</h3></a>
+                            </li>
+                            <li class="clinical-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/collection-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Clinical Waste Collection</h3></a>
+                            </li>
+                            <li class="computer-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/computer-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Computer Service</h3></a>
+                            </li>
+                            <li class="cpr-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/training-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">CPR/Basic Life Support Training</h3></a>
+                            </li>
+                            <li class="recruitment-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/recruitment-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Dental Recruitment</h3></a>
+                            </li>
+                            <li class="software-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/software-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Dental Software</h3></a>
+                            </li>
+                            <li class="electrical-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/safety-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Electrical Safety And Testing</h3></a>
+                            </li>
+                            <li class="marketing-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/marketing-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Marketing</h3></a>
+                            </li>
+                            <li class="others-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/others-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Others</h3></a>
+                            </li>
+                            <li class="repairs-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/repairs-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Repairs</h3></a>
+                            </li>
+                            <li class="solicitors-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/solicitors-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Solicitors</h3></a>
+                            </li>
+                            <li class="design-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/design-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Surgery Design</h3></a>
+                            </li>
+                            <li class="courses-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/courses-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Training & Courses</h3></a>
+                            </li>
+                            <li class="web-designers-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/designers-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Web designers</h3></a>
+                            </li>
+                            <li class="cleaning-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/cleaning-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Cleaning Agencies</h3></a>
+                            </li>
+                            <li class="chair-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/chair-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Dental Chair Recovery</h3></a>
+                            </li>
+                            <li class="equipment-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/equipment-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Equipment Engineering</h3></a>
+                            </li>
+                            <li class="gold-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/gold-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Selling Gold</h3></a>
+                            </li>
+                            <li class="uniform-item">
+                                <a href="#" class="img-wrap">
+                                    <img src="img/uniform-icon.png" alt="">
+                                </a>
+                                <a href="#"><h3 class="title">Uniform & Workwear</h3></a>
+                            </li>
+                        </ul>
+                    </div>
+                </main>
+                <aside class="right-sidebar">
+                    <div class="people-block">
+                        <div class="title-wrap">
+                            <h3 class="title title-secondary">People you may know</h3>
+                            <a href="#" class="text text-prim">See All</a>
+                        </div>
+                        <ul class="people-list">
+                            <li>
+                                <a href="#" class="title-link"><h4 class="title title-big">Dennis Adams</h4></a>
+                                <a href="#" class="img-left"><img src="img/first-person.png" alt=""></a>
+                                <span class="text">Dentist (Practice Owner)</span>
+                                <span class="text">London, England</span>
+                                <a class="follow-link" href="#">Add Friend</a>
+                            </li>
+                            <li>
+                                <a href="#" class="title-link"><h4 class="title title-big">Mary Carpenter</h4></a>
+                                <a href="#" class="img-left"><img src="img/second-person.png" alt=""></a>
+                                <span class="text">Dentist (Practice Owner)</span>
+                                <span class="text">Belgrade, Serbia</span>
+                                <a class="follow-link" href="#">Add Friend</a>
+                            </li>
+                            <li>
+                                <a href="#" class="title-link"><h4 class="title title-big">Danielle Salazar</h4></a>
+                                <a href="#" class="img-left"><img src="img/second-person.png" alt=""></a>
+                                <span class="text">Dentist (Practice Owner)</span>
+                                <span class="text">Paris, France</span>
+                                <a class="follow-link" href="#">Add Friend</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="products-block">
+                        <div class="title-wrap">
+                            <h3 class="title title-secondary">Featured products</h3>
+                            <a href="#" class="text text-prim">See All</a>
+                        </div>
+                        <ul class="products-list">
+                            <li>
+                                <a href="#" class="title-link"><h4 class="title title-big">Product Name</h4></a>
+                                <a href="#" class="img-left"><img src="img/first-product.png" alt=""></a>
+                                <p class="text">Product Short Description. The quick brown fox jumps over the lazy dog.</p>
+                            </li>
+                            <li>
+                                <a href="#" class="title-link"><h4 class="title title-big">Product Name</h4></a>
+                                <a href="#" class="img-left"><img src="img/second-product.png" alt=""></a>
+                                <p class="text">Product Short Description. The quick brown fox jumps over the lazy dog.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="advertising-block">
+                        <h3 class="title title-secondary">Advertisement</h3>
+                        <img src="img/second-aside-img.png" alt="">
+                        <p class="text">Ads by <a class="text text-secondary" href="#">Denteez.com</a></p>
+                    </div>
+                </aside>
             </div>
         </section>
-
 
 
     <script src="js/all.min.js"></script>
