@@ -1,6 +1,19 @@
 .main-content {
   padding: 0 10px 70px 11px;
 }
+
+.content-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  h2 {
+    max-width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 .services-list {
   width: 100%;
   padding: 15px 0 0 15px;
@@ -13,6 +26,7 @@
   li {
     width: 140px;
     margin: 0 15px 15px 0;
+    text-align: center;
 
     &:hover {
       .img-wrap {
@@ -27,7 +41,10 @@
 
 
     h3 {
-      text-align: center;
+      display: inline-block;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }

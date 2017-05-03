@@ -34,6 +34,15 @@
 .title {
   color: $primary-color;
 
+  &-middle {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &-big {
+    font-size: 30px;
+  }
+
   &-prim {
     font-size: 13.61px;
     &:hover {
